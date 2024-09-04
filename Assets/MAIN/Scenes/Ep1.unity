@@ -431,10 +431,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character - [Jenna]
       objectReference: {fileID: 0}
-    - target: {fileID: 1106531168213148263, guid: 92a8c52e286db254b9d41c1e8e62d898, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4716014175611779504, guid: 92a8c52e286db254b9d41c1e8e62d898, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -497,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4716014175611779504, guid: 92a8c52e286db254b9d41c1e8e62d898, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.0700073
+      value: -1.0700684
       objectReference: {fileID: 0}
     - target: {fileID: 4716014175611779504, guid: 92a8c52e286db254b9d41c1e8e62d898, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -647,6 +643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79aa74fa4e6a1aa4b875418c5247ed24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterpanel: {fileID: 912371592}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2920,7 +2917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7378268675995272286, guid: b4410155ab2a5bd419b21f4376674eb4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00012207031
+      value: 0.00024414062
       objectReference: {fileID: 0}
     - target: {fileID: 7378268675995272286, guid: b4410155ab2a5bd419b21f4376674eb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3022,7 +3019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7590311431258488532, guid: fae9abbf1ca1d9d4286f0296b4eae022, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00012207031
+      value: 0.00024414062
       objectReference: {fileID: 0}
     - target: {fileID: 7590311431258488532, guid: fae9abbf1ca1d9d4286f0296b4eae022, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

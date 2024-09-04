@@ -13,7 +13,6 @@ namespace TESTING
         // Start is called before the first frame update
         void Start()
         {
-            Character Jenna = CharacterManager.instance.CreateCharacter("Jenna");
             //Character Elen = CharacterManager.instance.CreateCharacter("Elen");
             //Character Adam = CharacterManager.instance.CreateCharacter("Adam");
             StartCoroutine(Test());
@@ -21,41 +20,21 @@ namespace TESTING
 
         IEnumerator Test()
         {
+            Character_Sprite Jenna = CharacterManager.instance.CreateCharacter("Lady") as Character_Sprite;
 
-            return null;
+            yield return new WaitForSeconds(1);
 
-            //
-            //Character Adam = CharacterManager.instance.CreateCharacter("Adam");
-            //Character Ben = CharacterManager.instance.CreateCharacter("Ben");
+            Sprite bodySprite= Jenna.GetSprite("lady_smile");
+            Sprite bodyySprite = Jenna.GetSprite("lady_angry");
 
+            yield return Jenna.TransitionSprite(bodySprite);
 
-            //List<string> lines = new List<string>()
-            //{
-            //    "\"HI!\"",
-            //    "This is a line. My name is Jenna.",
-            //    "And another.",
-            //    "And a last one.{wa 1} wait noo lool"
-            //};
-            //yield return Jenna.Say(lines);
-            //Jenna.SetNameColor(Color.red);
-            //Jenna.SetDialogueColor(Color.green);
-            //Jenna.SetNameFont(fontAsset);
-            //Jenna.SetDialogueFont(fontAsset);
-            //yield return Jenna.Say(lines);
-            //Jenna.ResetConfigurationData();
-            //yield return Jenna.Say(lines);
+            yield return new WaitForSeconds(2);
 
-            //lines = new List<string>()
-            //{
-            //    "I am Adam.",
-            //    "more lines{c} here"
-            //};
+            Jenna.TransitionSprite(bodyySprite);
 
-            //yield return Adam.Say(lines);
+            yield return null;
 
-            //yield return Ben.Say("this is a line that i want to say...{a}it is a simple line");
-
-            Debug.Log("finished");
         }
     }
 }

@@ -20,16 +20,16 @@ MonoBehaviour:
     dialogueColor: {r: 1, g: 1, b: 1, a: 1}
     nameFont: {fileID: 11400000, guid: eabf4e848478c204bb6cd86e8a63a62d, type: 2}
     dialogueFont: {fileID: 11400000, guid: bc59f05511c30f240a55dfe967a68067, type: 2}
-  - name: Elen
-    alias: e
-    characterType: 0
+  - name: Lady
+    alias: l
+    characterType: 1
     nameColor: {r: 1, g: 1, b: 1, a: 1}
     dialogueColor: {r: 1, g: 1, b: 1, a: 1}
     nameFont: {fileID: 11400000, guid: 10d4389366ff2e342a98896a5e8397c9, type: 2}
     dialogueFont: {fileID: 11400000, guid: ce908a465595b424894c422a8c51b144, type: 2}
-  - name: Ben
-    alias: b
-    characterType: 0
+  - name: Lord
+    alias: lord
+    characterType: 1
     nameColor: {r: 1, g: 0, b: 0, a: 1}
     dialogueColor: {r: 0, g: 0, b: 0, a: 1}
     nameFont: {fileID: 11400000, guid: a7df272660bd99e418a09e7fb2893e0a, type: 2}
