@@ -1,0 +1,13 @@
+[wait]print_1p("fdgjsdfgkfdgjksfdjgklsdjflgksdf")
+print_1p("fdgjsdfgkfdgjksfdjgklsdjflgksdf")
+
+Elen as Skibidi "(This is a thought)"
+Elen as ??? "What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go." playSong("fdsg" -v 1 -p 1)
+
+Elen as ??? at 1:0 "What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go."
+
+Elen at 0.5:0.5 as The Girl "What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go."
+
+showScene(false), StopMusic(all -s 1.5)
+
+Elen as ??? [0:Angle1, 1:Happy] at 0 "What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go."
