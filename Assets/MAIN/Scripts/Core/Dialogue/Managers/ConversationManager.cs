@@ -1,3 +1,4 @@
+using CHARACTERS;
 using COMMANDS;
 using System.Collections;
 using System.Collections.Generic;
@@ -69,7 +70,17 @@ namespace DIALOGUE
         {
             if(line.hasSpeaker)
             {
+                Character character = CharacterManager.instance.GetCharacter(line.speakerData.name, createIfDoesNotExist: false);
+                if(line.speakerData.makeCharacterEnter) 
+                {
+                    if (character == null)
+                        CharacterManager.instance.CreateCharacter(line.speakerData.name, revealAfterCreation: true);
+                    else
+                        character.Show();
+                }
                 dialogueSystem.ShowSpeakerName(line.speakerData.displayName);
+
+                DialogueSystem.instance.ApplySpeakerDataToDialogueContainer(line.speakerData.name);
             }
             
 

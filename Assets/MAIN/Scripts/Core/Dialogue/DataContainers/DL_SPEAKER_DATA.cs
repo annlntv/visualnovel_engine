@@ -16,6 +16,8 @@ namespace DIALOGUE
         public Vector2 castPosition;
         public List<(int layer, string expression)> CastExpressions { get; set; }
 
+        public bool makeCharacterEnter = false;
+
         private const string NAMECAST_ID = " as ";
         private const string POSITIONCAST_ID = " at ";
         private const string EXPRESSIONCAST_ID = " [";
@@ -23,8 +25,21 @@ namespace DIALOGUE
         private const char EXPRESSIONLAYER_JOINER = ',';
         private const char EXPRESSIONLAYER_DELIMITER = ':';
 
+        private const string ENTER_KEYWORD = "enter ";
+
+        private string ProcessKeyWords(string rawSpeaker)
+        {
+            if(rawSpeaker.StartsWith(ENTER_KEYWORD))
+            {
+                rawSpeaker = rawSpeaker.Substring(ENTER_KEYWORD.Length);
+                makeCharacterEnter = true;
+            }
+            return rawSpeaker;
+        }
+
         public DL_SPEAKER_DATA(string rawSpeaker)
         {
+            rawSpeaker = ProcessKeyWords(rawSpeaker);
             string pattern = @$"{NAMECAST_ID}|{POSITIONCAST_ID}|{EXPRESSIONCAST_ID.Insert(EXPRESSIONCAST_ID.Length - 1, @"\")}";
             MatchCollection matches = Regex.Matches(rawSpeaker, pattern);
 

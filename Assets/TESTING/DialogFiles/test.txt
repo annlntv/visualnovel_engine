@@ -1,3 +1,8 @@
-John "What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go." list(items -f long), playSong("Intro Song" -v -1)
-World "What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go."
+
+Jenna "huuuh whatcha doin here"
+
+enter Jenna "What do you want? I have a lot to do. I have to go. There's a lot of text here.{c} Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go."
+
+Lady "What do you want? I have a lot to do. I have to go. {wa 1}There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go."
+enter Lady "hellooo"
 narrator "What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go."
