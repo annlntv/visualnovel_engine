@@ -1,8 +1,13 @@
+wait(1), CreateCharacter(Lady), CreateCharacter(Jenna -e true), CreateCharacter(Ben -e true -i true)
 
-Jenna "huuuh whatcha doin here"
+MoveCharacter(Jenna 1 -0.5 0.75)
 
-enter Jenna "What do you want? I have a lot to do. I have to go. There's a lot of text here.{c} Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go."
+wait(1000)
 
-Lady "What do you want? I have a lot to do. I have to go. {wa 1}There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go."
-enter Lady "hellooo"
-narrator "What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go. There's a lot of text here. Blah blah blah. What do you want? I have a lot to do. I have to go."
+MoveCharacter(Jenna 0 1.2 false)
+
+Show(Lady Jenna Ben -immediate false)
+
+narrator "showing characters"
+
+Jenna "Fine. {wa 0.5} Couldn't be better."

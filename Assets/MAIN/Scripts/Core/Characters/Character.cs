@@ -272,6 +272,11 @@ namespace CHARACTERS
             animator.SetTrigger(ANIMATION_REFRESH_TRIGGER);
         }
 
+        public virtual void OnRecieveCastingExpression(int layer, string expression)
+        {
+            return;
+        }
+
         public enum CharacterType
         {
             Text,

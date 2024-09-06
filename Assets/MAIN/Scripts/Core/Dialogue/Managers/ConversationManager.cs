@@ -70,24 +70,33 @@ namespace DIALOGUE
         {
             if(line.hasSpeaker)
             {
-                Character character = CharacterManager.instance.GetCharacter(line.speakerData.name, createIfDoesNotExist: false);
-                if(line.speakerData.makeCharacterEnter) 
-                {
-                    if (character == null)
-                        CharacterManager.instance.CreateCharacter(line.speakerData.name, revealAfterCreation: true);
-                    else
-                        character.Show();
-                }
-                dialogueSystem.ShowSpeakerName(line.speakerData.displayName);
-
-                DialogueSystem.instance.ApplySpeakerDataToDialogueContainer(line.speakerData.name);
+                HandleSpeakerLogic(line.speakerData);
             }
-            
-
-
             yield return BuildLineSegments(line.dialogueData);
             //
 
+        }
+
+        private void HandleSpeakerLogic(DL_SPEAKER_DATA speakerData)
+        {
+            bool characterMustBeCreated = (speakerData.makeCharacterEnter || speakerData.isCastingPosition || speakerData.isCastingExpressions);
+
+            Character character = CharacterManager.instance.GetCharacter(speakerData.name, createIfDoesNotExist: characterMustBeCreated);
+            if (speakerData.makeCharacterEnter && (!character.isVisible && !character.isRevealing))
+                character.Show();
+            dialogueSystem.ShowSpeakerName(speakerData.displayName);
+
+            DialogueSystem.instance.ApplySpeakerDataToDialogueContainer(speakerData.name);
+
+            if(speakerData.isCastingPosition) { character.MoveToPosition(speakerData.castPosition); }
+
+            if(speakerData.isCastingExpressions)
+            {
+                foreach(var ce in speakerData.CastExpressions)
+                {
+                    character.OnRecieveCastingExpression(ce.layer, ce.expression);
+                }
+            }
         }
 
         IEnumerator Line_RunCommands(DIALOUGE_LINE line)
@@ -95,7 +104,7 @@ namespace DIALOGUE
             List<DL_COMMAND_DATA.Command> commands = line.commandData.commands;
             foreach(DL_COMMAND_DATA.Command command in commands)
             {
-                if (command.waitforCompletion)
+                if (command.waitforCompletion || command.name == "wait")
                     yield return CommandManager.instance.Execute(command.name, command.arguments);
                 else
                     CommandManager.instance.Execute(command.name, command.arguments);

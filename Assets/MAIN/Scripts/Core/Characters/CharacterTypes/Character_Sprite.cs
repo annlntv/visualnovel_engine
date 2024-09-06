@@ -166,5 +166,15 @@ namespace CHARACTERS
             }
             co_flipping = null;
         }
+
+        public override void OnRecieveCastingExpression(int layer, string expression)
+        {
+            Sprite sprite = GetSprite(expression);
+            if (sprite == null) {
+                Debug.Log($"Sprite {expression} could not be found for character {name}.");
+                return;
+            }
+            TransitionSprite(sprite, layer);
+        }
     }
 }
